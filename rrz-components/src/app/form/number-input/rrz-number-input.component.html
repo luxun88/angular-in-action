@@ -1,0 +1,8 @@
+<input #myInput type="number"
+  style = 'border: 1px solid lightgray;outline: none;height: 22px;width: 100%;'
+  [placeholder]="generatePlaceHolder()" 
+  [max]="max" 
+  [min]="min" 
+  [step]="step"
+  (keyup)="onKeyUp(myInput)">
+  <span *ngIf="!isValid(myInput.value)" style="color: red;">{{errorMessage}}</span>
